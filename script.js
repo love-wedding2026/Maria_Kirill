@@ -40,7 +40,7 @@ if (form) {
 
     const data = new FormData(form);
 
-    fetch("https://formsubmit.co/ajax/plyasheva4856@mail.ru", {
+    fetch("https://formsubmit.co/ajax/merryswit100420@mail.ru", {
       method: "POST",
       body: data
     })
