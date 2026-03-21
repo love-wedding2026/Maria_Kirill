@@ -29,3 +29,25 @@ const observer = new IntersectionObserver((entries) => {
 blocks.forEach(block => {
   observer.observe(block);
 });
+
+// Блок 8 — отправка без перехода
+
+const form = document.getElementById("form8");
+
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/plyasheva4856@mail.ru", {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.json())
+    .then(data => {
+      form.reset();
+    })
+    .catch(error => console.log(error));
+  });
+}
